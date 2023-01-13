@@ -1,0 +1,33 @@
+2023-01-13 18:23:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table tsetting_definition (id bigint not null, discriminator varchar(255) not null, name varchar(255) not null, [*]value varchar(255) not null, primary key (id))"; expected "identifier"; SQL statement:
+create table tsetting_definition (id bigint not null, discriminator varchar(255) not null, name varchar(255) not null, value varchar(255) not null, primary key (id)) [42001-214]
+2023-01-13 18:23:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select settingdef0_.id as id1_0_, settingdef0_.discriminator as discrimi2_0_, settingdef0_.name as name3_0_, settingdef0_.[*]value as value4_0_ from tsetting_definition settingdef0_ where settingdef0_.discriminator=?"; expected "identifier"; SQL statement:
+select settingdef0_.id as id1_0_, settingdef0_.discriminator as discrimi2_0_, settingdef0_.name as name3_0_, settingdef0_.value as value4_0_ from tsetting_definition settingdef0_ where settingdef0_.discriminator=? [42001-214]
+2023-01-13 18:23:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select settingdef0_.id as id1_0_, settingdef0_.discriminator as discrimi2_0_, settingdef0_.name as name3_0_, settingdef0_.[*]value as value4_0_ from tsetting_definition settingdef0_ where settingdef0_.discriminator=?"; expected "identifier"; SQL statement:
+select settingdef0_.id as id1_0_, settingdef0_.discriminator as discrimi2_0_, settingdef0_.name as name3_0_, settingdef0_.value as value4_0_ from tsetting_definition settingdef0_ where settingdef0_.discriminator=? [42001-214]
+2023-01-13 18:24:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select settingdef0_.id as id1_0_, settingdef0_.discriminator as discrimi2_0_, settingdef0_.name as name3_0_, settingdef0_.[*]value as value4_0_ from tsetting_definition settingdef0_ where settingdef0_.discriminator=?"; expected "identifier"; SQL statement:
+select settingdef0_.id as id1_0_, settingdef0_.discriminator as discrimi2_0_, settingdef0_.name as name3_0_, settingdef0_.value as value4_0_ from tsetting_definition settingdef0_ where settingdef0_.discriminator=? [42001-214]
+2023-01-13 18:24:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table tsetting_definition (id bigint not null, discriminator varchar(255) not null, name varchar(255) not null, [*]value varchar(255) not null, primary key (id))"; expected "identifier"; SQL statement:
+create table tsetting_definition (id bigint not null, discriminator varchar(255) not null, name varchar(255) not null, value varchar(255) not null, primary key (id)) [42001-214]
+2023-01-13 18:24:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select settingdef0_.id as id1_0_, settingdef0_.discriminator as discrimi2_0_, settingdef0_.name as name3_0_, settingdef0_.[*]value as value4_0_ from tsetting_definition settingdef0_ where settingdef0_.discriminator=?"; expected "identifier"; SQL statement:
+select settingdef0_.id as id1_0_, settingdef0_.discriminator as discrimi2_0_, settingdef0_.name as name3_0_, settingdef0_.value as value4_0_ from tsetting_definition settingdef0_ where settingdef0_.discriminator=? [42001-214]
+2023-01-13 18:24:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select settingdef0_.id as id1_0_, settingdef0_.discriminator as discrimi2_0_, settingdef0_.name as name3_0_, settingdef0_.[*]value as value4_0_ from tsetting_definition settingdef0_ where settingdef0_.discriminator=?"; expected "identifier"; SQL statement:
+select settingdef0_.id as id1_0_, settingdef0_.discriminator as discrimi2_0_, settingdef0_.name as name3_0_, settingdef0_.value as value4_0_ from tsetting_definition settingdef0_ where settingdef0_.discriminator=? [42001-214]
+2023-01-13 18:24:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select settingdef0_.id as id1_0_, settingdef0_.discriminator as discrimi2_0_, settingdef0_.name as name3_0_, settingdef0_.[*]value as value4_0_ from tsetting_definition settingdef0_ where settingdef0_.discriminator=?"; expected "identifier"; SQL statement:
+select settingdef0_.id as id1_0_, settingdef0_.discriminator as discrimi2_0_, settingdef0_.name as name3_0_, settingdef0_.value as value4_0_ from tsetting_definition settingdef0_ where settingdef0_.discriminator=? [42001-214]
+2023-01-13 18:24:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select settingdef0_.id as id1_0_, settingdef0_.discriminator as discrimi2_0_, settingdef0_.name as name3_0_, settingdef0_.[*]value as value4_0_ from tsetting_definition settingdef0_ where settingdef0_.discriminator=?"; expected "identifier"; SQL statement:
+select settingdef0_.id as id1_0_, settingdef0_.discriminator as discrimi2_0_, settingdef0_.name as name3_0_, settingdef0_.value as value4_0_ from tsetting_definition settingdef0_ where settingdef0_.discriminator=? [42001-214]
+2023-01-13 18:24:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select settingdef0_.id as id1_0_, settingdef0_.discriminator as discrimi2_0_, settingdef0_.name as name3_0_, settingdef0_.[*]value as value4_0_ from tsetting_definition settingdef0_ where settingdef0_.discriminator=?"; expected "identifier"; SQL statement:
+select settingdef0_.id as id1_0_, settingdef0_.discriminator as discrimi2_0_, settingdef0_.name as name3_0_, settingdef0_.value as value4_0_ from tsetting_definition settingdef0_ where settingdef0_.discriminator=? [42001-214]
+2023-01-13 18:25:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select settingdef0_.id as id1_0_, settingdef0_.discriminator as discrimi2_0_, settingdef0_.name as name3_0_, settingdef0_.[*]value as value4_0_ from tsetting_definition settingdef0_ where settingdef0_.discriminator=?"; expected "identifier"; SQL statement:
+select settingdef0_.id as id1_0_, settingdef0_.discriminator as discrimi2_0_, settingdef0_.name as name3_0_, settingdef0_.value as value4_0_ from tsetting_definition settingdef0_ where settingdef0_.discriminator=? [42001-214]

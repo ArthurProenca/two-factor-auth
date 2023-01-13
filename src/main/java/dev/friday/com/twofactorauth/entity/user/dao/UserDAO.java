@@ -1,4 +1,4 @@
-package dev.friday.com.twofactorauth.entity.dao;
+package dev.friday.com.twofactorauth.entity.user.dao;
 
 import lombok.*;
 
