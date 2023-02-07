@@ -5,11 +5,9 @@ import lombok.experimental.UtilityClass;
 @UtilityClass
 public class UserUtil {
 
-    private String regexEmailPattern;
-
-    public boolean isEmail(String username) {
+    public static boolean isValidEmail(String email) {
         //regex to verify email
-        return username.matches("^[a-z0-9.]+@[a-z0-9]+\\.[a-z]+\\.([a-z]+)?$");
+        return !email.matches("^([\\w\\.\\-]+)@([\\w\\-]+)((\\.(\\w){2,3})+)$");
     }
 
     //generate a random 6 digit code

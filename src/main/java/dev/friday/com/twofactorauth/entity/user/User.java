@@ -1,44 +1,53 @@
 package dev.friday.com.twofactorauth.entity.user;
 
-import lombok.*;
+public interface User {
+    Long getId();
 
-import javax.persistence.*;
-import java.util.Date;
 
-@Entity
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
-@Table(name = "TUSER")
-@Builder
-public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "ID", nullable = false)
-    private Long id;
+    String getEmail();
 
-    @Column(name = "USERNAME", nullable = false)
-    private String username;
 
-    @Column(name = "PASSWORD", nullable = false)
-    private String password;
+    String getPassword();
 
-    @Column(name = "IS_VERIFIED", nullable = false)
-    private Boolean isVerified;
+    java.util.UUID getToken();
 
-    @Column(name = "SENDED_CONFIRMATION", nullable = false)
-    private Boolean sendedConfirmation;
 
-    @Column(name = "VERIFICATION_CODE", nullable = true)
-    private String verificationCode;
+    Boolean getIsVerified();
 
-    @Column(name = "CREATED_DATE", nullable = false)
-    private Date createdDate;
 
-    @Column(name = "LAST_MODIFIED", nullable = false)
-    private Date lastModified;
 
-    @Column(name = "VERIFICATION_DATE", nullable = true)
-    private Date verificationDate;
+    Boolean getSendedConfirmation();
+
+
+    String getVerificationCode();
+
+
+
+    java.util.Date getCreatedDate();
+
+
+    java.util.Date getLastModified();
+
+
+    java.util.Date getVerificationDate();
+
+    void setId(Long id);
+
+    void setEmail(String email);
+
+    void setPassword(String password);
+
+    void setToken(java.util.UUID token);
+
+    void setIsVerified(Boolean isVerified);
+
+    void setSendedConfirmation(Boolean sendedConfirmation);
+
+    void setVerificationCode(String verificationCode);
+
+    void setCreatedDate(java.util.Date createdDate);
+
+    void setLastModified(java.util.Date lastModified);
+
+    void setVerificationDate(java.util.Date verificationDate);
 }

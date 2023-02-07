@@ -1,8 +1,8 @@
 package dev.friday.com.twofactorauth.controller.user.impl;
 
 import dev.friday.com.twofactorauth.controller.user.UserRestController;
-import dev.friday.com.twofactorauth.entity.user.dto.UserDTO;
-import dev.friday.com.twofactorauth.entity.user.dto.UserValidatorDTO;
+import dev.friday.com.twofactorauth.entity.user.impl.dto.UserDTO;
+import dev.friday.com.twofactorauth.entity.user.impl.dto.UserValidatorDTO;
 import dev.friday.com.twofactorauth.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor
+@RequestMapping("/user")
 public class UserRestControllerImpl implements UserRestController {
 
     private final UserService userService;
@@ -17,8 +18,8 @@ public class UserRestControllerImpl implements UserRestController {
 
     @Override
     @PostMapping("/v1/signup")
-    public ResponseEntity<?> createUser(@RequestBody UserDTO userDTO) {
-        return ResponseEntity.ok().body(userService.createUser(userDTO));
+    public ResponseEntity<UserDTO> createUser(@RequestBody UserDTO userDTO) {
+        return ResponseEntity.ok().body(UserDTO.of(userService.createUser(userDTO)));
     }
 
     @Override

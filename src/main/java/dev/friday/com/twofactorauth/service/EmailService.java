@@ -1,7 +1,5 @@
 package dev.friday.com.twofactorauth.service;
 
-import dev.friday.com.twofactorauth.repository.settingdefinition.SettingDefinitionRepository;
-import dev.friday.com.twofactorauth.utils.EnvironmentUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
@@ -11,10 +9,6 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class EmailService {
     private final JavaMailSender emailSender;
-
-    private final SettingDefinitionRepository settingDefinitionRepository;
-
-    private final EnvironmentUtil environmentUtil;
 
     public void sendEmail(String to, String subject, String text) {
         SimpleMailMessage message = new SimpleMailMessage();

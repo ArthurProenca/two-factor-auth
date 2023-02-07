@@ -1,7 +1,8 @@
 package dev.friday.com.twofactorauth.service.settingdefinition;
 
 import dev.friday.com.twofactorauth.entity.settingdefinition.SettingDefinition;
-import dev.friday.com.twofactorauth.entity.settingdefinition.dto.SettingDefinitionDTO;
+import dev.friday.com.twofactorauth.entity.settingdefinition.impl.SettingDefinitionImpl;
+import dev.friday.com.twofactorauth.entity.settingdefinition.impl.dto.SettingDefinitionDTO;
 import dev.friday.com.twofactorauth.repository.settingdefinition.SettingDefinitionRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -14,7 +15,7 @@ public class SettingDefinitionService {
     private final SettingDefinitionRepository settingDefinitionRepository;
 
     public SettingDefinition createSettingDefinition(SettingDefinitionDTO settingDefinitionDTO) {
-        return settingDefinitionRepository.save(SettingDefinition.builder()
+        return settingDefinitionRepository.save(SettingDefinitionImpl.builder()
                 .value(settingDefinitionDTO.getValue())
                 .discriminator(settingDefinitionDTO.getDiscriminator())
                 .name(settingDefinitionDTO.getName())

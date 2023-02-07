@@ -1,8 +1,7 @@
 package dev.friday.com.twofactorauth.controller.settingdefinition.impl;
 
 import dev.friday.com.twofactorauth.controller.settingdefinition.SettingDefinitionRestController;
-import dev.friday.com.twofactorauth.entity.settingdefinition.dto.SettingDefinitionDTO;
-import dev.friday.com.twofactorauth.repository.settingdefinition.SettingDefinitionRepository;
+import dev.friday.com.twofactorauth.entity.settingdefinition.impl.dto.SettingDefinitionDTO;
 import dev.friday.com.twofactorauth.service.settingdefinition.SettingDefinitionService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;

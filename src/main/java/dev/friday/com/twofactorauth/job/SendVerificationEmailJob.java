@@ -20,8 +20,8 @@ public class SendVerificationEmailJob {
         log.info("Verifying users that are not verified");
         String generatedCode = UserUtil.generateCode();
         userRepository.findAllByIsVerifiedAndSendedConfirmation(false, false).forEach(user -> {
-            log.info("Sending verification email to {}", user.getUsername());
-            emailService.sendEmail(user.getUsername(), "Verification email", "Use " + generatedCode + " to verify your account");
+            log.info("Sending verification email to {}", user.getEmail());
+            //emailService.sendEmail(user.getEmail(), "Verification email", "Use " + generatedCode + " to verify your account");
             user.setSendedConfirmation(true);
             user.setVerificationCode(generatedCode);
             userRepository.save(user);

@@ -1,7 +1,6 @@
 package dev.friday.com.twofactorauth.controller.base.impl;
 
 import dev.friday.com.twofactorauth.controller.base.BaseRestController;
-import dev.friday.com.twofactorauth.utils.UserUtil;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
