@@ -42,7 +42,7 @@ public class UserImpl implements User {
     private Date verificationDate;
 
     @Transient
-    public static UserImpl userFactory(UserDTO userDTO) {
+    public static UserImpl from(UserDTO userDTO) {
         return UserImpl.builder()
                 .email(userDTO.getEmail())
                 .password(userDTO.getPassword())

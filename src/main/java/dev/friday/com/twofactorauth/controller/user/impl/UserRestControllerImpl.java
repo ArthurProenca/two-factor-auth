@@ -15,16 +15,15 @@ public class UserRestControllerImpl implements UserRestController {
 
     private final UserService userService;
 
-
     @Override
     @PostMapping("/v1/signup")
     public ResponseEntity<UserDTO> createUser(@RequestBody UserDTO userDTO) {
-        return ResponseEntity.ok().body(UserDTO.of(userService.createUser(userDTO)));
+        return ResponseEntity.ok().body(userService.createUser(userDTO));
     }
 
     @Override
     @PutMapping("/v1/confirm")
-    public ResponseEntity<?> confirmUser(@RequestBody UserValidatorDTO userValidatorDTO) {
+    public ResponseEntity<UserDTO> confirmUser(@RequestBody UserValidatorDTO userValidatorDTO) {
         return ResponseEntity.ok().body(userService.confirmUser(userValidatorDTO));
     }
 

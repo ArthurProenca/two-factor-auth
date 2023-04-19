@@ -2,7 +2,6 @@ package dev.friday.com.twofactorauth.service;
 
 import dev.friday.com.twofactorauth.entity.user.User;
 import dev.friday.com.twofactorauth.entity.user.impl.UserImpl;
-import dev.friday.com.twofactorauth.entity.user.impl.dao.UserDAO;
 import dev.friday.com.twofactorauth.entity.user.impl.dto.UserDTO;
 import dev.friday.com.twofactorauth.entity.user.impl.dto.UserValidatorDTO;
 import dev.friday.com.twofactorauth.exception.validation.ValidationException;
@@ -20,7 +19,7 @@ public class UserService {
 
     private final UserRepository userRepository;
 
-    public UserDAO createUser(UserDTO userDTO) {
+    public UserDTO createUser(UserDTO userDTO) {
         if (UserUtil.isValidEmail(userDTO.getEmail())) {
             throw new ValidationException("Email must be valid (aka: loremipsum@email.com)");
         }
@@ -29,12 +28,12 @@ public class UserService {
             throw new ValidationException("User already exists");
         }
 
-        User userPersisted = userRepository.save(UserImpl.userFactory(userDTO));
+        User userPersisted = userRepository.save(UserImpl.from(userDTO));
 
-        return UserDAO.of(userPersisted);
+        return UserDTO.of(userPersisted);
     }
 
-    public Object confirmUser(UserValidatorDTO userValidatorDTO) {
+    public UserDTO confirmUser(UserValidatorDTO userValidatorDTO) {
         UserImpl userImpl = userRepository.findByEmail(userValidatorDTO.getEmail()).orElseThrow(() -> new RuntimeException("User not found"));
 
         if (userImpl.getIsVerified()) {
@@ -47,6 +46,6 @@ public class UserService {
         userImpl.setIsVerified(true);
         userImpl.setVerificationDate(Date.from(Instant.now()));
 
-        return userRepository.save(userImpl);
+        return UserDTO.of(userRepository.save(userImpl));
     }
 }
